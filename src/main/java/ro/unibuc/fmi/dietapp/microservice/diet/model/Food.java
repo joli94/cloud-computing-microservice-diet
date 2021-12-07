@@ -1,6 +1,7 @@
 package ro.unibuc.fmi.dietapp.microservice.diet.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Food {
@@ -12,4 +13,7 @@ public class Food {
     private String name;
 
     private Long calories;
+
+    @OneToMany(mappedBy = "food", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<FoodIngredients> foodIngredientsList;
 }
