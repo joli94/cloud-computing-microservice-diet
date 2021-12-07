@@ -23,4 +23,7 @@ public class Diet {
     private DietType dietType;
 
     private DietGoal dietGoal;
+
+    @OneToMany(mappedBy = "diet", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<DietPlan> dietPlanList;
 }

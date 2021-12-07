@@ -19,9 +19,9 @@ public class DietService {
         return repository.findAll();
     }
 
-    public List<Diet> findByGoal(Long id) { return repository.findByDietGoalId(id); }
+    public List<Diet> findByGoal(Long id) { return repository.findByDietGoal(id); }
 
-    public List<Diet> findByType(Long id) { return repository.findByDietTypeId(id); }
+    public List<Diet> findByType(Long id) { return repository.findByDietType(id); }
 
     public Diet findById(Long id) { return repository.findById(id).orElseThrow(
             ()-> new EntityNotFoundException("The diet with this id doesn't exist in the database!")

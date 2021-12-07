@@ -14,8 +14,11 @@ public class Food {
 
     private Long calories;
 
+    private FoodCategory category;
+
     @OneToMany(mappedBy = "food", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<FoodIngredients> foodIngredientsList;
 
-    private FoodCategory category;
+    @OneToMany(mappedBy = "food", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<DietPlan> dietPlanList;
 }
