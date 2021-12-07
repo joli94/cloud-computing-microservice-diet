@@ -15,13 +15,13 @@ import java.util.List;
 public class Ingredient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "column_id")
+    @Column(name = "ingredient_id")
     private Long id;
 
-    @Column(name = "INGREDIENT_NAME")
+    @Column(name = "ingredient_name")
     private String name;
 
-    @Column(name = "INGREDIENT_CALORIES")
+    @Column(name = "ingredient_calories")
     private Long calories;
 
     /*@OneToMany(mappedBy = "ingredient", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
