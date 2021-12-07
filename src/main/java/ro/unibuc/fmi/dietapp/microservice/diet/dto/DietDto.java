@@ -7,12 +7,16 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class FoodDto {
+public class DietDto {
     private Long id;
 
     private String name;
 
-    private Long calories;
+    private long price;
 
-    private Long category;
+    private long maximumCalories;
+
+    private Long dietGoal;
+
+    private Long dietType;
 }
