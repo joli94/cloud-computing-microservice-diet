@@ -16,4 +16,6 @@ public class Food {
 
     @OneToMany(mappedBy = "food", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<FoodIngredients> foodIngredientsList;
+
+    private FoodCategory category;
 }
