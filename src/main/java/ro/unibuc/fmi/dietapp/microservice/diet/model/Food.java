@@ -1,9 +1,17 @@
 package ro.unibuc.fmi.dietapp.microservice.diet.model;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Food {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

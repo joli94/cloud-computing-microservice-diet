@@ -16,7 +16,7 @@ public class DietDto {
 
     private long maximumCalories;
 
-    private Long dietGoal;
+    private DietGoalDto dietGoal;
 
-    private Long dietType;
+    private DietTypeDto dietType;
 }

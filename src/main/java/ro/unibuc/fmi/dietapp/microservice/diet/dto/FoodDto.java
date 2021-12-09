@@ -14,5 +14,5 @@ public class FoodDto {
 
     private Long calories;
 
-    private Long category;
+    private FoodCategoryDto category;
 }
