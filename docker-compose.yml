@@ -1,0 +1,14 @@
+version: "3"
+services:
+  microservice-diet-db:
+    image: postgres
+    environment:
+      - POSTGRES_USER = postgres
+      - POSTGRES_PASSWORD = password
+      - POSTGRES_DB = diets
+  microservice-diet:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - microservice-diet-db
