@@ -1,7 +1,5 @@
 package ro.unibuc.fmi.dietapp.microservice.diet.mapper;
 
-import org.mapstruct.Mapper;
-
 import java.util.List;
 
 public interface EntityMapper <D, E>{
