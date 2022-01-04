@@ -4,8 +4,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ro.unibuc.fmi.dietapp.microservice.diet.dto.DietDto;
+import ro.unibuc.fmi.dietapp.microservice.diet.dto.DietGoalDto;
 import ro.unibuc.fmi.dietapp.microservice.diet.mapper.DietMapper;
 import ro.unibuc.fmi.dietapp.microservice.diet.model.Diet;
+import ro.unibuc.fmi.dietapp.microservice.diet.model.DietGoal;
 import ro.unibuc.fmi.dietapp.microservice.diet.service.DietService;
 
 import java.util.List;

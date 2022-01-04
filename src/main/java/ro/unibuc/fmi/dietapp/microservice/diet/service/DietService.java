@@ -3,6 +3,8 @@ package ro.unibuc.fmi.dietapp.microservice.diet.service;
 import org.springframework.stereotype.Service;
 import ro.unibuc.fmi.dietapp.microservice.diet.exception.EntityNotFoundException;
 import ro.unibuc.fmi.dietapp.microservice.diet.model.Diet;
+import ro.unibuc.fmi.dietapp.microservice.diet.model.DietGoal;
+import ro.unibuc.fmi.dietapp.microservice.diet.model.DietType;
 import ro.unibuc.fmi.dietapp.microservice.diet.repository.DietRepository;
 
 import java.util.List;
@@ -19,9 +21,15 @@ public class DietService {
         return repository.findAll();
     }
 
-    public List<Diet> findByGoal(Long id) { return repository.findByDietGoal(id); }
+    public List<Diet> findByGoal(Long id) {
+        DietGoal tempObj = DietGoal.values()[id.intValue()];
+        return repository.findByDietGoal(tempObj);
+    }
 
-    public List<Diet> findByType(Long id) { return repository.findByDietType(id); }
+    public List<Diet> findByType(Long id) {
+        DietType tempObj = DietType.values()[id.intValue()];
+        return repository.findByDietType(tempObj);
+    }
 
     public Diet findById(Long id) { return repository.findById(id).orElseThrow(
             ()-> new EntityNotFoundException("The diet with this id doesn't exist in the database!")
