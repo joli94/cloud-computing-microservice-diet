@@ -25,7 +25,7 @@ public class IngredientService {
         List<Ingredient> ingredientList = new ArrayList<>();
         List<FoodIngredients> result =  service.findByFoodId(id);
 
-        result.forEach((foodIngredients) -> ingredientList.add(findById(foodIngredients.getId())));
+        result.forEach((foodIngredients) -> ingredientList.add(findById(foodIngredients.getIngredient().getId())));
 
         return ingredientList;
     }

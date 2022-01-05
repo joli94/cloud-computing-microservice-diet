@@ -10,7 +10,7 @@
     </parent>
     <groupId>ro.unibuc.fmi.diet-app.microservice</groupId>
     <artifactId>diet</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.6-SNAPSHOT</version>
     <name>diet</name>
     <description>diet</description>
     <properties>

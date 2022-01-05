@@ -27,14 +27,14 @@ public class FoodService {
         List<Food> foodList = new ArrayList<>();
         List<DietPlan> result =  service.findByDiet(id);
 
-        result.forEach((food) -> foodList.add(findById(food.getId())));
+        result.forEach((food) -> foodList.add(findById(food.getFood().getId())));
 
         return foodList;
     }
 
     public Food findById(Long id){
         return repository.findById(id).orElseThrow(
-                ()-> new EntityNotFoundException("The food with this id doesn't exist in the database!")
+                ()-> new EntityNotFoundException(String.format("The food with the id=%s doesn't exist in the database!", id.toString()))
         );
     }
 }
