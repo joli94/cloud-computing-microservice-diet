@@ -12,7 +12,6 @@ import ro.unibuc.fmi.dietapp.microservice.diet.service.DietService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/diets")
 public class DietController {
